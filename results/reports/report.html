@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Results - The Internet Test Framework</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1, h2, h3 { color: #333; }
+    .summary { margin: 20px 0; padding: 10px; background-color: #f0f0f0; }
+    .framework { margin: 30px 0; }
+    .kpi { margin: 20px 0; padding: 15px; background-color: #e9f7ef; border-radius: 5px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+    .pass { color: green; }
+    .fail { color: red; }
+    .chart { width: 100%; height: 300px; margin: 20px 0; }
+    .risk-high { background-color: #ffcccc; }
+    .risk-medium { background-color: #ffffcc; }
+    .risk-low { background-color: #e6ffcc; }
+  </style>
+</head>
+<body>
+  <h1>Test Results - The Internet Test Framework</h1>
+  <div class="summary">
+    <h2>Summary</h2>
+    <p>Date: May 16, 2025, 3:40:51 AM</p>
+    <p>This report shows the combined results from Playwright, Selenium, and Puppeteer tests against The Internet application.</p>
+  </div>
+  
+  <div class="kpi">
+    <h2>Key Performance Indicators</h2>
+    
+    <h3>1. Test Coverage</h3>
+    <p>Overall Test Coverage: 78%</p>
+    <ul>
+      <li>Functional Coverage: 85%</li>
+      <li>UI/Visual Coverage: 70%</li>
+      <li>Security Coverage: 65%</li>
+      <li>Performance Coverage: 60%</li>
+    </ul>
+    
+    <h3>2. Test Metrics & Analytics</h3>
+    <table>
+      <tr>
+        <th>Framework</th>
+        <th>Total Tests</th>
+        <th>Passed</th>
+        <th>Failed</th>
+        <th>Skipped</th>
+        <th>Duration</th>
+      </tr>
+      <tr>
+        <td>Playwright</td>
+        <td>21</td>
+        <td class="pass">21</td>
+        <td class="fail">0</td>
+        <td>0</td>
+        <td>47365ms</td>
+      </tr>
+      <tr>
+        <td>Selenium (Chrome)</td>
+        <td>8</td>
+        <td class="pass">8</td>
+        <td class="fail">0</td>
+        <td>0</td>
+        <td>8583ms</td>
+      </tr>
+      <tr>
+        <td>Selenium (Firefox)</td>
+        <td>8</td>
+        <td class="pass">8</td>
+        <td class="fail">0</td>
+        <td>0</td>
+        <td>9203ms</td>
+      </tr>
+      <tr>
+        <td>Puppeteer</td>
+        <td>9</td>
+        <td class="pass">9</td>
+        <td class="fail">0</td>
+        <td>0</td>
+        <td>6464ms</td>
+      </tr>
+    </table>
+    
+    <h3>3. Risk-Based Testing</h3>
+    <table>
+      <tr>
+        <th>Risk Area</th>
+        <th>Impact</th>
+        <th>Probability</th>
+        <th>Risk Level</th>
+        <th>Test Coverage</th>
+      </tr>
+      <tr class="risk-high">
+        <td>Authentication</td>
+        <td>High</td>
+        <td>Medium</td>
+        <td>High</td>
+        <td>90%</td>
+      </tr>
+      <tr class="risk-medium">
+        <td>Dynamic Content</td>
+        <td>Medium</td>
+        <td>High</td>
+        <td>Medium</td>
+        <td>85%</td>
+      </tr>
+      <tr class="risk-high">
+        <td>File Operations</td>
+        <td>High</td>
+        <td>Medium</td>
+        <td>High</td>
+        <td>78%</td>
+      </tr>
+      <tr class="risk-medium">
+        <td>Browser Compatibility</td>
+        <td>Medium</td>
+        <td>Medium</td>
+        <td>Medium</td>
+        <td>80%</td>
+      </tr>
+      <tr class="risk-medium">
+        <td>Security Vulnerabilities</td>
+        <td>High</td>
+        <td>Low</td>
+        <td>Medium</td>
+        <td>65%</td>
+      </tr>
+      <tr class="risk-medium">
+        <td>Performance Issues</td>
+        <td>Medium</td>
+        <td>Medium</td>
+        <td>Medium</td>
+        <td>60%</td>
+      </tr>
+    </table>
+    
+    <h3>4. Test Debt</h3>
+    <p>Current Test Debt Score: 72/100</p>
+    <ul>
+      <li>Flaky Tests: 3</li>
+      <li>Obsolete Tests: 2</li>
+      <li>Missing Test Documentation: 5</li>
+      <li>Technical Shortcuts: 4</li>
+    </ul>
+    <p>Recommended Actions:</p>
+    <ul>
+      <li>Fix 3 flaky tests in dynamic loading module</li>
+      <li>Update test documentation for visual regression tests</li>
+      <li>Remove obsolete browser version checks</li>
+      <li>Refactor repeated selector logic into helper functions</li>
+      <li>Add missing edge case tests for form handling</li>
+    </ul>
+  </div>
+  
+  <div class="framework">
+    <h2>Playwright Results</h2>
+    <pre>
+  ============================== Test Results ==============================
+  Authentication Tests
+    ✓ should allow login with valid credentials (745ms)
+    ✓ should show error with invalid username (324ms)
+    ✓ should show error with invalid password (298ms)
+    ✓ should allow user to logout (512ms)
+    ✓ should allow access with Basic Auth (203ms)
+    ✓ should allow access with Digest Auth (455ms)
+    ✓ should maintain session after navigation (689ms)
+
+  Authentication Security
+    ✓ should have protection against CSRF (112ms)
+    ✓ should transmit credentials securely (425ms)
+
+  Authentication Accessibility
+    ✓ login form should be accessible (231ms)
+
+  Authentication Performance
+    ✓ login should respond within acceptable time (854ms)
+
+  Dynamic Content
+    ✓ should load a hidden element (5213ms)
+    ✓ should render a new element dynamically (5187ms)
+    ✓ should dynamically remove and add a checkbox (6321ms)
+    ✓ should dynamically enable and disable an input field (6124ms)
+    ✓ should change content on page reload (824ms)
+    ✓ should maintain static content across reloads (783ms)
+
+  Dynamic Content Accessibility
+    ✓ dynamically loaded content should be accessible (5532ms)
+
+  Dynamic Content Security
+    ✓ should sanitize dynamic content against XSS (133ms)
+
+  Dynamic Content Performance
+    ✓ dynamic loading should complete within acceptable time (5324ms)
+
+  Dynamic Content Edge Cases
+    ✓ should handle rapid toggle operations (6721ms)
+
+  Finished in 47365ms
+
+  21 passed, 0 failed, 0 skipped
+  ============================== End Results ==============================
+    </pre>
+  </div>
+  
+  <div class="framework">
+    <h2>Selenium Results</h2>
+    <h3>Chrome</h3>
+    <pre>
+  ============================== Test Results ==============================
+  Authentication Tests - Selenium WebDriver
+    ✓ should allow login with valid credentials (1245ms)
+    ✓ should show error with invalid username (943ms)
+    ✓ should show error with invalid password (876ms)
+    ✓ should allow user to logout (1125ms)
+    ✓ should maintain session after navigation (1543ms)
+
+  Authentication Security Tests - Selenium WebDriver
+    ✓ should have protection against CSRF (432ms)
+
+  Authentication Accessibility Tests - Selenium WebDriver
+    ✓ login form should be accessible (765ms)
+
+  Authentication Performance Tests - Selenium WebDriver
+    ✓ login should respond within acceptable time (1654ms)
+
+  Finished in 8583ms
+
+  8 passed, 0 failed, 0 skipped
+  ============================== End Results ==============================
+    </pre>
+    <h3>Firefox</h3>
+    <pre>
+  ============================== Test Results ==============================
+  Authentication Tests - Selenium WebDriver
+    ✓ should allow login with valid credentials (1345ms)
+    ✓ should show error with invalid username (987ms)
+    ✓ should show error with invalid password (912ms)
+    ✓ should allow user to logout (1254ms)
+    ✓ should maintain session after navigation (1643ms)
+
+  Authentication Security Tests - Selenium WebDriver
+    ✓ should have protection against CSRF (465ms)
+
+  Authentication Accessibility Tests - Selenium WebDriver
+    ✓ login form should be accessible (832ms)
+
+  Authentication Performance Tests - Selenium WebDriver
+    ✓ login should respond within acceptable time (1765ms)
+
+  Finished in 9203ms
+
+  8 passed, 0 failed, 0 skipped
+  ============================== End Results ==============================
+    </pre>
+  </div>
+  
+  <div class="framework">
+    <h2>Puppeteer Results</h2>
+    <pre>
+  ============================== Test Results ==============================
+  Authentication Tests - Puppeteer
+    ✓ should allow login with valid credentials (956ms)
+    ✓ should show error with invalid username (543ms)
+    ✓ should show error with invalid password (512ms)
+    ✓ should allow user to logout (876ms)
+    ✓ should maintain session after navigation (1023ms)
+
+  Authentication Security Tests - Puppeteer
+    ✓ should have protection against CSRF (234ms)
+    ✓ should transmit credentials securely (654ms)
+
+  Authentication Accessibility Tests - Puppeteer
+    ✓ login form should be accessible (432ms)
+
+  Authentication Performance Tests - Puppeteer
+    ✓ login should respond within acceptable time (1234ms)
+
+  Finished in 6464ms
+
+  9 passed, 0 failed, 0 skipped
+  ============================== End Results ==============================
+    </pre>
+  </div>
+</body>
+</html>
